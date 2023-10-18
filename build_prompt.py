@@ -1,16 +1,24 @@
 import prompt_template
 import decorator
 import primer
+import pyperclip
 
 # Modify question to be asked 
-question = "What is your name?"
+question = "How does recursion work?"
 
-# Change primer and decorator to be used
+# Provide an example of question and answer to guide response
+example = ""
+
+# Change template, primer and decorator to be used
 # Multiple primer and decorators can be used
-prompt = prompt_template.template_pqd.format(
+prompt = prompt_template.template.format(
     priming=primer.explainer, 
-    question=question, 
-    decorator= decorator.add_comment + decorator.explore_ways)
+    question=question,
+    example=example, 
+    decorator="")
 
 # Run the script to get the prompt
 print(prompt)
+
+# Copy the prompt to clipboard
+pyperclip.copy(prompt)
