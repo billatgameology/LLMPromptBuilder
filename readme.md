@@ -1,0 +1,1 @@
+Simple string builder for LLM prompt
